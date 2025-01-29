@@ -15,7 +15,6 @@ provider "cloudstack" {
 
 
 resource "cloudstack_instance" "iis_server" {
-  depends_on       = [cloudstack_instance.ad_server]
   name             = "www01"
   service_offering = "CD-I-2-12"
   template         = "WIN2022-UEFI-CLOUDINIT-TMPLT"
